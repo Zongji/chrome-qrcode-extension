@@ -2,6 +2,7 @@
 var data = {};
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 		// alert(JSON.stringify(tabId)+"\n"+JSON.stringify(changeInfo)+"\n"+JSON.stringify(tab));
+		data = {};
 		if (tab.url !='' && tab.url.indexOf("chrome://") < 0) {
 			//只有浏览网页的时候出现
 			data.url = tab.url;
