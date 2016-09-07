@@ -18,7 +18,6 @@ function toUtf8(str) {
     return out;
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
 	var data = chrome.extension.getBackgroundPage().data;
 	// alert(JSON.stringify(data));
@@ -30,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// }
 
 	var encodedurl = toUtf8(data.url);
+  $("#qrCanvas").html();
 	//  alert(encodedurl);
 	$("#qrCanvas").qrcode({
     render: "canvas", //table方式
